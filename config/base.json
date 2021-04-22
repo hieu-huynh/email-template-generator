@@ -1,0 +1,44 @@
+{
+  "logo": "https://storage.ezform.xyz/email_logo.png",
+  "appDownload": {
+    "iphone": {
+      "url": "#",
+      "icon": "https://storage.googleapis.com/storage.ezform.xyz/email_iphone_app_download.png"
+    },
+    "android": {
+      "url": "#",
+      "icon": "https://storage.googleapis.com/storage.ezform.xyz/email_android_app_download.png"
+    }
+  },
+
+  "contact": {
+    "email": "contact@ezform.vn",
+    "hotline": "0936 554 127",
+    "internationalHotline": "(+84) 936 554 127",
+    "address": "89 Hoàng Sa, Phường Đa Kao, Quận 1, Thành phố Hồ Chí Minh, Việt Nam"
+  },
+
+  "socialIcons": [
+    {
+      "provider": "Twitter",
+      "url": "#",
+      "icon": "https://storage.ezform.xyz/email_vector.png"
+    },
+    {
+      "provider": "LinkedIn",
+      "url": "#",
+      "icon": "https://storage.ezform.xyz/email_linkedin_black.png"
+    },
+    {
+      "provider": "Facebook",
+      "url": "#",
+      "icon": "https://storage.ezform.xyz/email_facebook_black.png"
+    },
+    {
+      "provider": "Zalo",
+      "url": "#",
+      "icon": "https://storage.ezform.xyz/email_zalo_logo.png"
+    }
+  ],
+  "copyright": "© Copyright 2021 | ezForm Việt Nam | All Rights Reserved"
+}
