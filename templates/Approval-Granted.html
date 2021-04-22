@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>EzForm Email</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900%26display=swap" rel="stylesheet" />
+
+    <style>
+        /* -------------------------------------
+          GLOBAL RESETS
+      ------------------------------------- */
+
+        /*All the styling goes here*/
+
+        img {
+            border: none;
+            -ms-interpolation-mode: bicubic;
+            max-width: 100%;
+        }
+
+        body {
+            background-color: #003d5b;
+            font-family: 'Open Sans', serif;
+            -webkit-font-smoothing: antialiased;
+            color: white;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        table {
+            border-collapse: separate;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+            width: 100%;
+            border-spacing: 0;
+        }
+
+        table td {
+            font-family: 'Playfair Display', serif;
+            font-size: 14px;
+            vertical-align: top;
+        }
+
+        /* -------------------------------------
+          BODY & CONTAINER
+      ------------------------------------- */
+
+        .body {
+            width: 100%;
+        }
+
+        /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+        .container {
+            display: block;
+            margin: 0 auto !important;
+            /* makes it centered */
+            max-width: 500px;
+            width: 500px;
+        }
+
+        /* This should also be a block element, so that it will fill 100% of the .container */
+        .content {
+            box-sizing: border-box;
+            display: block;
+            margin: 0 auto;
+            max-width: 580px;
+        }
+
+        .logo {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* -------------------------------------
+          HEADER, FOOTER, MAIN
+      ------------------------------------- */
+        .main {
+            background: #ffffff;
+            border-radius: 4px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .wrapper {
+            box-sizing: border-box;
+            padding: 24px;
+        }
+
+        .small-block {
+            max-width: 70%;
+            margin: 0 auto;
+        }
+
+        .content-block {
+            text-align: center;
+        }
+
+        .heading-block {
+            width: 100%;
+            padding: 24px 16px 17px 16px;
+            background-color: rgba(144, 224, 239, 0.2);
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .heading-block h1 {
+            color: #30638e;
+        }
+
+        .heading-block.granted {
+            background-color: #27AE60;
+        }
+
+        .heading-block.denied {
+            background-color: #D1495B;
+        }
+
+        .heading-block.granted h1, .heading-block.denied h1 {
+            color: white;
+        }
+
+        .footer {
+            padding: 24px 16px 20px 16px;
+            text-align: center;
+        }
+
+        .app-download-icons td:first-child {
+            padding-right: 7px;
+        }
+
+        .social-icon-column {
+            display: inline-block;
+            height: 24px;
+            width: 24px;
+            padding: 0 8px;
+        }
+
+        /* -------------------------------------
+          TYPOGRAPHY
+      ------------------------------------- */
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        h5,
+        h6 {
+            display: inline;
+            margin: 0;
+            color: white;
+            font-weight: 400;
+            font-family: 'Open Sans', serif;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        h2 {
+            font-size: 15px;
+        }
+
+        h5 {
+            font-size: 15px;
+        }
+
+        h6 {
+            font-size: 12px;
+        }
+
+        p,
+        ul,
+        ol {
+            color: #000f14;
+            font-family: 'Playfair Display', serif;
+            font-size: 14px;
+            font-weight: normal;
+            margin: 0;
+        }
+
+        p li,
+        ul li,
+        ol li {
+            list-style-position: inside;
+            margin-left: 5px;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: underline;
+        }
+
+        /* -------------------------------------
+          BUTTONS
+      ------------------------------------- */
+        .btn {
+            box-sizing: border-box;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn a {
+            box-sizing: border-box;
+            cursor: pointer;
+            display: inline-block;
+            margin: 0;
+            padding: 18px 101px;
+            color: #3498db;
+            border: 2px solid #003d5b;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+
+        .btn-primary a {
+            background-color: #30638e;
+            border-color: #3498db;
+            color: #ffffff;
+        }
+
+        .btn-primary a:hover {
+            background-color: #34495e !important;
+            border-color: #34495e !important;
+        }
+
+        /* -------------------------------------
+          OTHER STYLES THAT MIGHT BE USEFUL
+      ------------------------------------- */
+        .separator {
+            width: 100%;
+            height: 1px;
+            padding-top: 12px;
+        }
+
+        .block-separator {
+            padding-top: 16px;
+        }
+
+        .content-separator {
+            padding-top: 24px;
+        }
+
+        .row-separator {
+            padding-top: 32px;
+        }
+
+        .align-right {
+            text-align: right;
+        }
+
+        .align-left {
+            text-align: left;
+        }
+
+        .preheader {
+            color: transparent;
+            display: none;
+            height: 0;
+            max-height: 0;
+            max-width: 0;
+            opacity: 0;
+            overflow: hidden;
+            mso-hide: all;
+            visibility: hidden;
+            width: 0;
+        }
+
+
+
+
+        hr {
+            border: 0;
+            border-bottom: 1px solid #f6f6f6;
+            margin: 20px 0;
+        }
+
+        /* -------------------------------------
+          RESPONSIVE AND MOBILE FRIENDLY STYLES
+      ------------------------------------- */
+        @media only screen and (max-width: 620px) {
+            table[class='body'] h1 {
+                font-size: 28px !important;
+            }
+
+            table[class='body'] p,
+            table[class='body'] ul,
+            table[class='body'] ol,
+            table[class='body'] td,
+            table[class='body'] span,
+            table[class='body'] a {
+                font-size: 16px !important;
+            }
+
+            table[class='body'] .wrapper,
+            table[class='body'] .article {
+                padding: 16px !important;
+            }
+
+            table[class='body'] .content {
+                padding: 16px !important;
+            }
+
+            table[class='body'] .container {
+                padding: 0 !important;
+                width: 100% !important;
+            }
+
+
+            table[class='body'] .btn a {
+                width: 100% !important;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<span class="preheader">
+      This is preheader text. Some clients will show this text as a preview.
+    </span>
+<table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
+    <tr>
+        <td class="container">
+            <div class="logo">
+                <img width="105px" src="https://storage.ezform.xyz/email_logo.png"/>
+            </div>
+            <!-- START CENTERED WHITE CONTAINER -->
+            <div class="content">
+                <table role="presentation" class="main">
+                    <tr>
+                        <td class="granted heading-block">
+                            <h1>tài liệu đã được ký tên/phê duyệt</h1>
+                        </td>
+                    </tr>
+                    <!-- START MAIN CONTENT AREA -->
+                    <tr>
+                        <td class="wrapper">
+                            <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <p>
+                                            Xin chào
+                                                <strong>John Doe!</strong>
+                                        </p>
+                                        <div class="separator"></div>
+
+                                            <p>
+                                                Tài liệu bạn gửi đi đã được ký tên hoặc phê duyệt bởi
+                                                    Nguyễn Văn A (a.nguyen@gmail.com)
+                                                . Hãy click vào nút bên dưới để mở và xem tài liệu.
+                                            </p>
+                                        
+                                                    <div class="row-separator"></div>
+                                            
+                                                    <div class="btn btn-primary">
+                                                        <a href="" target="_blank"><h2>Xem Tài Liệu</h2></a>
+                                                    </div>
+
+                                        <div class="row-separator"></div>
+
+                                        <p>
+                                            Trân trọng,
+                                            <br/>
+                                            ezForm Team
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- END MAIN CONTENT AREA -->
+                </table>
+            </div>
+            <!-- END CENTERED WHITE CONTAINER -->
+            <div class="footer">
+                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td>
+                                <h5>Tải ứng dụng ezForm về</h5>
+
+                                <div class="block-separator"></div>
+
+                                <table role="presentation" class="app-download-icons">
+                                    <tr>
+                                        <td class="align-right">
+                                            <a href="#">
+                                                <img
+                                                        src="https://storage.googleapis.com/storage.ezform.xyz/email_iphone_app_download.png"
+                                                        alt="iphone-app-download-icon"
+                                                />
+                                            </a>
+                                        </td>
+                                        <td class="align-left">
+                                            <a href="#">
+                                                <img
+                                                        src="https://storage.googleapis.com/storage.ezform.xyz/email_android_app_download.png"
+                                                        alt="android-app-download-icon"
+                                                />
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="content-separator"></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <h6>
+                                    Email này là email tự động, xin hãy đừng trả lời lại email này. Nếu bạn có bất
+                                    cứ câu hỏi nào xin hãy email về
+                                    <a href="mailto:contact@ezform.vn"><h6>contact@ezform.vn</h6></a>
+                                    hoặc liên hệ số máy 0936 554 127.
+                                </h6>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="content-separator"></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="small-block">
+                                    <h6>
+                                        89 Hoàng Sa, Phường Đa Kao, Quận 1, Thành phố Hồ Chí Minh, Việt Nam, (+84) 936 554 127
+                                    </h6>
+                                </div>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="block-separator"></td>
+                        </tr>
+
+                        <tr>
+                                <td class="social-icon-column">
+                                    <a
+                                            role="social-icon-link"
+                                            href="#"
+                                            target="_blank"
+                                            alt="Twitter"
+                                            title="Twitter"
+                                    >
+                                        <img
+                                                role="social-icon"
+                                                alt="Twitter"
+                                                title="Twitter"
+                                                src="https://storage.ezform.xyz/email_vector.png"
+                                        />
+                                    </a>
+                                </td>
+                                <td class="social-icon-column">
+                                    <a
+                                            role="social-icon-link"
+                                            href="#"
+                                            target="_blank"
+                                            alt="LinkedIn"
+                                            title="LinkedIn"
+                                    >
+                                        <img
+                                                role="social-icon"
+                                                alt="LinkedIn"
+                                                title="LinkedIn"
+                                                src="https://storage.ezform.xyz/email_linkedin_black.png"
+                                        />
+                                    </a>
+                                </td>
+                                <td class="social-icon-column">
+                                    <a
+                                            role="social-icon-link"
+                                            href="#"
+                                            target="_blank"
+                                            alt="Facebook"
+                                            title="Facebook"
+                                    >
+                                        <img
+                                                role="social-icon"
+                                                alt="Facebook"
+                                                title="Facebook"
+                                                src="https://storage.ezform.xyz/email_facebook_black.png"
+                                        />
+                                    </a>
+                                </td>
+                                <td class="social-icon-column">
+                                    <a
+                                            role="social-icon-link"
+                                            href="#"
+                                            target="_blank"
+                                            alt="Zalo"
+                                            title="Zalo"
+                                    >
+                                        <img
+                                                role="social-icon"
+                                                alt="Zalo"
+                                                title="Zalo"
+                                                src="https://storage.ezform.xyz/email_zalo_logo.png"
+                                        />
+                                    </a>
+                                </td>
+                        </tr>
+
+                        <tr>
+                            <td class="content-separator"></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <h6>© Copyright 2021 | ezForm Việt Nam | All Rights Reserved</h6>
+                            </td>
+                        </tr>
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>
+
+
+
+
+
+
+
+
+</body>
+</html>

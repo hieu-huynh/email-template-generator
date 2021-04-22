@@ -1,0 +1,12 @@
+{
+  "template": "Welcome",
+  "title": "Chào Mừng Đến ezForm!",
+  "user": {
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  "cta": {
+    "url": "https://ezform.xyz/auth/login",
+    "text": "Đăng Nhập"
+  }
+}

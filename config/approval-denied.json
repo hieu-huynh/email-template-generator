@@ -1,0 +1,21 @@
+{
+  "template": "Approval-Denied",
+  "title": "tài liệu đã bị từ chối ký tên/phê duyệt",
+  "denied": true,
+  "user": {
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  "requestData": {
+    "user": {
+      "firstName": "Nguyễn Văn",
+      "lastName": "A",
+      "email": "a.nguyen@gmail.com"
+    },
+    "note": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet."
+  },
+  "cta": {
+    "url": "",
+    "text": "Xem Tài Liệu"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "template": "Account-Verification",
+  "title": "Xác Nhận Tài Khoản",
+  "user": {
+    "firstName": "John",
+    "lastName": "Doe"
+  },
+  "cta": {
+    "url": "dsfsadf",
+    "text": "Xác Nhận Tài Khoản"
+  }
+}
